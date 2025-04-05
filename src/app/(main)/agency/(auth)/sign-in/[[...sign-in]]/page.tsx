@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import * as Clerk from "@clerk/elements/common";
 import * as SignIn from "@clerk/elements/sign-in";
+import { Loader } from "lucide-react";
 
 export default function SignInPage() {
   return (
@@ -41,7 +42,7 @@ export default function SignInPage() {
                           <Clerk.Loading scope="provider:google">
                             {(isLoading) =>
                               isLoading ? (
-                                <Icons.spinner className="size-4 animate-spin" />
+                                <Loader className="animate-spin w-4 h-4" />
                               ) : (
                                 <>
                                   <Icons.google className="mr-2 size-4" />
@@ -73,7 +74,7 @@ export default function SignInPage() {
                           <Clerk.Loading>
                             {(isLoading) => {
                               return isLoading ? (
-                                <Icons.spinner className="size-4 animate-spin" />
+                                <Loader className="animate-spin w-4 h-4" />
                               ) : (
                                 "Continue"
                               );
@@ -128,7 +129,7 @@ export default function SignInPage() {
                           <Clerk.Loading>
                             {(isLoading) => {
                               return isLoading ? (
-                                <Icons.spinner className="size-4 animate-spin" />
+                                <Loader className="animate-spin w-4 h-4" />
                               ) : (
                                 "Go back"
                               );
@@ -171,7 +172,7 @@ export default function SignInPage() {
                             <Clerk.Loading>
                               {(isLoading) => {
                                 return isLoading ? (
-                                  <Icons.spinner className="size-4 animate-spin" />
+                                  <Loader className="animate-spin w-4 h-4" />
                                 ) : (
                                   "Continue"
                                 );
@@ -252,7 +253,7 @@ export default function SignInPage() {
                             <Clerk.Loading>
                               {(isLoading) => {
                                 return isLoading ? (
-                                  <Icons.spinner className="size-4 animate-spin" />
+                                  <Loader className="animate-spin w-4 h-4" />
                                 ) : (
                                   "Continue"
                                 );
