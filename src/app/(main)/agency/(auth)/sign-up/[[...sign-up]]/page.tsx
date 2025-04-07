@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Icons } from "@/components/ui/icons";
 import { cn } from "@/lib/utils";
+import { Loader } from "lucide-react";
 
 export default function SignUpPage() {
   return (
@@ -42,7 +43,7 @@ export default function SignUpPage() {
                           <Clerk.Loading scope="provider:google">
                             {(isLoading) =>
                               isLoading ? (
-                                <Icons.spinner className="size-4 animate-spin" />
+                               <Loader className="animate-spin w-4 h-4" />
                               ) : (
                                 <>
                                   <Icons.google className="mr-2 size-4" />
@@ -84,7 +85,7 @@ export default function SignUpPage() {
                           <Clerk.Loading>
                             {(isLoading) => {
                               return isLoading ? (
-                                <Icons.spinner className="size-4 animate-spin" />
+                                <Loader className="animate-spin w-4 h-4" />
                               ) : (
                                 "Continue"
                               );
@@ -125,7 +126,7 @@ export default function SignUpPage() {
                           <Clerk.Loading>
                             {(isLoading) => {
                               return isLoading ? (
-                                <Icons.spinner className="size-4 animate-spin" />
+                                <Loader className="animate-spin w-4 h-4" />
                               ) : (
                                 "Continue"
                               );
@@ -211,7 +212,7 @@ export default function SignUpPage() {
                             <Clerk.Loading>
                               {(isLoading) => {
                                 return isLoading ? (
-                                  <Icons.spinner className="size-4 animate-spin" />
+                                  <Loader className="animate-spin w-4 h-4" />
                                 ) : (
                                   "Continue"
                                 );
